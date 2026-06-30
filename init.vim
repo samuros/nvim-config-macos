@@ -39,10 +39,10 @@ nnoremap <C-f> /
 nnoremap <C-a> ggVG
 inoremap <C-a> <Esc>ggVG
 vnoremap <C-a> ggVG
-nnoremap <C-p> :Telescope find_files<CR>
+nnoremap <C-p> :Telescope fin
 nnoremap <C-g> :Telescope live_grep<CR>
 "Comandos"
-command! Oimg execute "!open %"
+command! Oimg execute "!open " . shellescape(expand("%:p"))
 "Plugins"
 call plug#begin()
 Plug 'sbdchd/neoformat'
